@@ -18,6 +18,14 @@ COMO RODAR A APLICAÇÃO
 
     docker images ls
 
-5 - O primeiro container a ser inicializado é o do servidor Apache, este deve ser iniciado dentro da pasta
+5 - O primeiro container a ser inicializado é o do servidor Apache, este deve ser iniciado dentro da pasta "Html"
 
     docker run -it --rm --name myapache-app -p 8080:80 -v "$PWD":/usr/local/apache2/httpd
+    
+6 - O próximo container a ser inicializado é o do servidor, este também deverá ser iniciado dentro da pasta "Html"
+    
+    docker run -it --rm --network=host -v "$(pwd):/var/www/html" --name=server server-image
+    
+Perceba que o container roda no modo iterativo, esta aplicação requisitará do usuário o número de IP e porta para realizar a conexão com o client através do socket, o IP a ser informado é o IP local da máquina que está rodando o servidor, e a porta fica a escolha do usuário, recomenda-se portas como: 50000, 60000.
+
+7 - Após subir os containers anteriores é hora de subir o último container, o do client, antes disso é necessário editar o arquivo config.txt que se encontra dentro da pasta config. Este arquivo deverá conter o número de IP e porta (os mesmos informados no servidor), a
