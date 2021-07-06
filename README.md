@@ -28,10 +28,10 @@ COMO RODAR A APLICAÇÃO
     
 Perceba que o container roda no modo iterativo, esta aplicação requisitará do usuário o número de IP e porta para realizar a conexão com o client através do socket, o IP a ser informado é o IP local da máquina que está rodando o servidor, e a porta fica a escolha do usuário, recomenda-se portas como: 50000, 60000.
 
-7 - Após subir os containers anteriores é hora de subir o último container, o do client, antes disso é necessário editar o arquivo config.txt que se encontra dentro da pasta config. Este arquivo deverá conter o número de IP e porta (os mesmos informados no servidor), as próximas 3 linhas do arquivo são respectivamente um IP qualquer no qual deseja-se realizar o monitoramento, um endereço eletrônico qualquer e por último o IP do access point.
+7 - Após subir os containers anteriores é hora de subir o último container, o do client, antes disso é necessário editar o arquivo config.txt que se encontra dentro da pasta config. Este arquivo deverá conter o número de IP e porta (os mesmos informados no servidor). As próximas 3 linhas do arquivo são respectivamente um IP qualquer no qual deseja-se realizar o monitoramento, um endereço eletrônico qualquer e por último o IP do access point.
 
-8 - O container do client deverá ser inicializado no mesmo diretório que contém a pasta "config":
+8 - O container do client deverá ser inicializado no diretório que contém a pasta "config":
  
     docker run --rm --network=host -v "$(pwd):/config" --name-client client_image python3 teste.py
     
-9 - Após a inicialização dos 3 containers a aplicação deverá estar funcionado, você pode verificar o monitoramento através do servidor WEB inicializado pelo Apache, você pode acessá-lo através de qualquer navegador pelo endereço: SEU_IP_LOCAL:8080.
+9 - Após a inicialização dos 3 containers a aplicação deverá estar funcionado, você pode verificar o monitoramento através do servidor WEB inicializado pelo Apache, você pode acessá-lo através de qualquer navegador pelo endereço: SEU_IP_LOCAL:8080 .
