@@ -1,3 +1,8 @@
+Sistema de monitoramento client-servidor
+
+Este é um projeto realizado na disciplina Laboratório de Redes do curso Bacharelado em Engenharia Elétrica, do Instituto Federal do Espírito Santo. Este projeto consiste em 2 programas, um rodará na máquina client em que será monitorado a conexão de certos endereços com a internet, a resposta HTTP e o estado do DNS. Estas informações serão transmitidas para a máquina servidor através de um socket, este receberá os dados e irá exibi-los em uma página Web com o auxílio de um servidor local utilizando o Apache.
+
+
 COMO RODAR A APLICAÇÃO
 
 1 - Para rodar a aplicação, deve-se ter o Docker instalado, caso não tenha poderá obter informações sobre a instalação em: https://docs.docker.com/get-docker/
