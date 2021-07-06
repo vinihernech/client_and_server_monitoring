@@ -28,4 +28,4 @@ COMO RODAR A APLICAÇÃO
     
 Perceba que o container roda no modo iterativo, esta aplicação requisitará do usuário o número de IP e porta para realizar a conexão com o client através do socket, o IP a ser informado é o IP local da máquina que está rodando o servidor, e a porta fica a escolha do usuário, recomenda-se portas como: 50000, 60000.
 
-7 - Após subir os containers anteriores é hora de subir o último container, o do client, antes disso é necessário editar o arquivo config.txt que se encontra dentro da pasta config. Este arquivo deverá conter o número de IP e porta (os mesmos informados no servidor), a
+7 - Após subir os containers anteriores é hora de subir o último container, o do client, antes disso é necessário editar o arquivo config.txt que se encontra dentro da pasta config. Este arquivo deverá conter o número de IP e porta (os mesmos informados no servidor), as próximas 3 linhas do arquivo são respectivamente o IP do access point, o kkgklg
